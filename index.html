@@ -165,13 +165,178 @@
   max-width: none !important;
   max-height: none !important;
   aspect-ratio: auto !important;
-  object-fit: cover !important;
+  object-fit: contain !important;
   object-position: center center !important;
   border-radius: inherit !important;
+  background: #dcecff !important;
   mix-blend-mode: normal !important;
   transform: none !important;
   box-sizing: border-box !important;
 }
+</style>
+<style>
+
+/* MITTAL RESERVE SHOP — appended additions; original styles remain intact. */
+#mr-cart-jump{position:relative;overflow:visible}
+.mr-cart-count{position:absolute;right:-4px;top:-5px;min-width:19px;height:19px;padding:0 4px;border-radius:999px;background:var(--coral);color:#fff;font-size:10px;font-weight:1000;display:grid;place-items:center;border:2px solid var(--cream)}
+.mr-shop{padding:clamp(62px,8vw,112px) 0;background:linear-gradient(180deg,#e5f1ff 0%,#fff9ec 100%);position:relative;overflow:hidden;isolation:isolate}
+.mr-shop:before{content:"✦";position:absolute;left:-22px;top:42px;color:var(--coral);font-size:160px;line-height:1;opacity:.15;z-index:-1;transform:rotate(-15deg)}
+.mr-shop:after{content:"MR";position:absolute;right:-20px;bottom:10px;font-size:clamp(140px,27vw,340px);font-weight:1000;letter-spacing:-.12em;line-height:.8;color:#0969e8;opacity:.045;z-index:-1;pointer-events:none}
+.mr-shop-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(230px,.55fr);align-items:end;gap:24px;margin-bottom:30px}
+.mr-shop-kicker{display:inline-flex;align-items:center;gap:8px;color:var(--blue);font-size:10px;font-weight:1000;letter-spacing:.17em;text-transform:uppercase;margin-bottom:14px}
+.mr-shop-kicker:before{content:"";width:25px;height:3px;border-radius:5px;background:var(--coral)}
+.mr-shop h2{font-size:clamp(42px,6.8vw,83px);line-height:.9;letter-spacing:-.075em;color:var(--navy);margin:0;font-weight:1000}
+.mr-shop h2 em{font-family:Georgia,serif;color:var(--blue);font-weight:500;letter-spacing:-.07em}
+.mr-shop-intro{font-size:14px;line-height:1.8;color:var(--muted);max-width:450px;margin:0 0 4px}
+.mr-shop-notice{display:flex;align-items:center;gap:10px;margin:0 0 23px;padding:13px 16px;border:1px solid #0969e822;background:#fffdf6b8;border-radius:16px;color:#52647b;font-size:11px;line-height:1.5}
+.mr-shop-notice strong{color:var(--ink)}
+.mr-shop-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,325px);gap:22px;align-items:start}
+.mr-shop-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.mr-product{border-radius:23px;background:#fffdf8;border:1px solid #0b23420e;overflow:hidden;box-shadow:0 14px 36px #0b23420b;display:flex;flex-direction:column;min-width:0;transition:transform .25s,box-shadow .25s}
+.mr-product:hover{transform:translateY(-4px);box-shadow:0 20px 44px #0b234218}
+.mr-product-art{height:192px;display:grid;place-items:center;position:relative;overflow:hidden;background:var(--art-bg,#dcecff);isolation:isolate}
+.mr-product-art:before,.mr-product-art:after{content:"";position:absolute;border:1px solid #ffffff87;border-radius:50%;width:160px;height:160px;z-index:-1;left:-45px;top:-72px}
+.mr-product-art:after{width:110px;height:110px;left:auto;top:auto;right:-28px;bottom:-52px;border-color:#0969e826}
+.mr-art-spark{position:absolute;right:16px;top:13px;color:var(--blue);font-size:21px;transform:rotate(10deg)}
+.mr-pack{position:relative;display:flex;align-items:center;justify-content:center;flex-direction:column;box-shadow:0 15px 22px #08224320;transition:transform .25s}
+.mr-product:hover .mr-pack{transform:translateY(-3px) rotate(-1deg)}
+.mr-brand-label{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;background:#fff9ec;color:#0b2342;border-top:1px solid #0b234216;border-bottom:1px solid #0b234216;padding:7px 5px;text-align:left;box-shadow:0 4px 10px #071a3112}
+.mr-brand-label b{display:grid;place-items:center;width:26px;height:26px;background:var(--blue);color:#fff;border-radius:8px;font-size:9px;letter-spacing:-1px;flex:none}
+.mr-brand-label span{font-weight:1000;font-size:8px;line-height:1.05;letter-spacing:.07em}
+.mr-brand-label small{display:block;font-size:5px;letter-spacing:.14em;color:var(--blue);margin-top:3px}
+.mr-pouch{width:106px;height:137px;border-radius:10px 10px 17px 17px;background:linear-gradient(100deg,#123c75,#0969e8 45%,#004fc8);padding-top:20px;clip-path:polygon(4% 0,96% 0,100% 100%,0 100%)}
+.mr-pouch:before{content:"";position:absolute;top:8px;left:0;right:0;height:5px;background:#f8cb61}
+.mr-pouch .mr-brand-label{margin-top:18px}
+.mr-pouch .mr-flavour{font-size:8px;color:#fff;letter-spacing:.14em;text-align:center;font-weight:1000;margin:0 0 5px}
+.mr-pouch .mr-tinyline{font-size:6px;color:#d9eaff;letter-spacing:.13em;text-align:center;margin:0 0 7px}
+.mr-cocoa{background:linear-gradient(100deg,#603d36,#b66b4e 48%,#754539)}
+.mr-cocoa .mr-brand-label b{background:#a45b41}
+.mr-cup{width:100px;height:115px;background:linear-gradient(100deg,#fffdf4,#dfeaff 55%,#fffdf4);border-radius:8px 8px 24px 24px;clip-path:polygon(4% 0,96% 0,87% 100%,13% 100%);padding-top:23px}
+.mr-cup:before{content:"";position:absolute;top:0;left:0;right:0;height:12px;background:#0b2342;border-radius:8px}
+.mr-cup .mr-brand-label{margin-top:15px;transform:rotate(-2deg)}
+.mr-mug{width:96px;height:82px;border-radius:8px 8px 21px 21px;background:linear-gradient(90deg,#d8e8ff,#fffdf6 40%,#e8f1ff);position:relative;padding-top:14px}
+.mr-mug:after{content:"";position:absolute;width:28px;height:34px;border:9px solid #e8f1ff;border-left:0;right:-20px;top:19px;border-radius:0 15px 15px 0;z-index:-1}
+.mr-mug .mr-brand-label{margin-top:13px}
+.mr-tumbler{width:67px;height:132px;border-radius:13px 13px 18px 18px;background:linear-gradient(90deg,#ff858b,#ff6b73 40%,#e64d60);padding-top:24px}
+.mr-tumbler:before{content:"";position:absolute;top:-5px;left:13px;right:13px;height:12px;border-radius:5px;background:#0b2342}
+.mr-tumbler .mr-brand-label{margin-top:20px;flex-direction:column;gap:3px;padding:6px 2px}
+.mr-tumbler .mr-brand-label b{width:22px;height:22px}
+.mr-tumbler .mr-brand-label span{text-align:center;font-size:6px}
+.mr-cap{width:135px;height:70px;background:linear-gradient(100deg,#0a56b9,#0969e8 60%,#004fc8);border-radius:70px 70px 9px 9px;transform:rotate(-7deg);box-shadow:0 9px 0 #003f9c;align-items:center;justify-content:center;padding:11px 10px 2px}
+.mr-cap:after{content:"";width:73px;height:15px;position:absolute;right:-23px;bottom:-9px;border-radius:0 0 100% 10%;background:#0758c7;transform:rotate(-8deg)}
+.mr-cap .mr-brand-label{width:61px;height:31px;padding:3px;border-radius:7px;border:2px solid #f8cb61;box-shadow:none;gap:4px}
+.mr-cap .mr-brand-label b{width:20px;height:20px;border-radius:6px;font-size:7px}
+.mr-cap .mr-brand-label span{font-size:5px}
+.mr-tote{width:105px;height:112px;background:#fff0d9;border-radius:7px 7px 12px 12px;padding-top:22px;position:relative}
+.mr-tote:before{content:"";position:absolute;top:-18px;width:42px;height:33px;border:7px solid #0b2342;border-bottom:0;border-radius:25px 25px 0 0}
+.mr-tote .mr-brand-label{width:90%;margin-top:10px;padding:6px 3px}
+.mr-stickers{width:142px;height:114px;display:flex;justify-content:center;align-items:center;gap:5px;flex-wrap:wrap;box-shadow:none}
+.mr-sticker{width:47px;height:47px;border-radius:15px 15px 16px 8px;background:#0969e8;color:white;display:grid;place-items:center;font-weight:1000;font-size:10px;transform:rotate(-8deg);box-shadow:0 7px 0 #004fc8}
+.mr-sticker:nth-child(2){background:#ff6b73;color:#fff;transform:rotate(8deg);border-radius:50%}
+.mr-sticker:nth-child(3){background:#f8cb61;color:#0b2342;transform:rotate(5deg)}
+.mr-stickers small{flex-basis:100%;text-align:center;color:#0b2342;background:#fff9ec;font-size:8px;font-weight:1000;letter-spacing:.13em;padding:7px 3px;border-radius:6px}
+.mr-gift{width:120px;height:105px;background:#0969e8;border:7px solid #004fc8;padding-top:18px;border-radius:5px;box-shadow:0 16px 22px #08224320}
+.mr-gift:before{content:"";position:absolute;top:-7px;bottom:-7px;left:50%;width:14px;transform:translateX(-50%);background:#ff6b73}
+.mr-gift .mr-brand-label{position:relative;width:90%;margin-top:9px;padding:5px 3px;z-index:1}
+.mr-product-info{padding:16px 15px 15px;display:flex;flex-direction:column;align-items:flex-start;gap:7px;flex:1}
+.mr-product-category{font-size:8px;text-transform:uppercase;letter-spacing:.16em;font-weight:1000;color:var(--blue)}
+.mr-product-name{font-size:17px;font-weight:1000;letter-spacing:-.04em;line-height:1.05;margin:0;color:var(--navy)}
+.mr-product-desc{margin:0;color:var(--muted);font-size:11px;line-height:1.55;min-height:34px}
+.mr-product-bottom{display:flex;justify-content:space-between;align-items:center;width:100%;gap:8px;margin-top:auto;padding-top:8px}
+.mr-price{font-size:18px;font-weight:1000;color:var(--navy);letter-spacing:-.04em;white-space:nowrap}
+.mr-add{border:0;border-radius:999px;padding:10px 13px;background:var(--blue);color:#fff;font-size:10px;font-weight:1000;white-space:nowrap;box-shadow:0 4px 0 var(--blue2);transition:transform .18s,background .18s}
+.mr-add:hover{background:var(--coral);transform:translateY(-2px);box-shadow:0 4px 0 #df515d}
+.mr-add:active{transform:translateY(2px);box-shadow:none}
+.mr-shop-cart{position:sticky;top:18px;background:#0b2342;color:#fff;border-radius:25px;padding:21px;box-shadow:0 23px 45px #0b23421d}
+.mr-cart-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-bottom:16px;border-bottom:1px solid #ffffff26}
+.mr-cart-title{font-size:25px;letter-spacing:-.06em;font-weight:1000;margin:0;color:#fff}
+.mr-cart-count-label{color:#b7d7ff;font-size:10px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.mr-cart-lines{padding:8px 0;max-height:330px;overflow:auto}
+.mr-cart-empty{padding:18px 0 20px;color:#cfdaeb;font-size:12px;line-height:1.7}
+.mr-cart-line{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;padding:13px 0;border-bottom:1px solid #ffffff20}
+.mr-cart-line-name{font-size:12px;font-weight:900;color:#fff;margin-bottom:5px}
+.mr-cart-line-price{font-size:10px;color:#bcd5f8}
+.mr-cart-controls{display:flex;align-items:center;gap:7px;justify-content:flex-end}
+.mr-qty-btn,.mr-remove-btn{border:1px solid #ffffff42;background:#18395e;color:#fff;width:27px;height:27px;border-radius:50%;font-size:16px;display:grid;place-items:center;padding:0}
+.mr-qty{font-size:11px;min-width:13px;text-align:center;font-weight:900}
+.mr-remove-btn{font-size:12px;color:#ffb8bd}
+.mr-cart-total{display:flex;justify-content:space-between;align-items:center;padding:15px 0 6px;color:#d8e8ff;font-size:12px}
+.mr-cart-total strong{font-size:23px;color:#fff;letter-spacing:-.05em}
+.mr-cart-fineprint{font-size:9px;line-height:1.55;color:#adbed5;margin:7px 0 15px}
+.mr-checkout,.mr-clear-cart{width:100%;border:0;border-radius:999px;padding:13px 15px;font-weight:1000;font-size:11px;display:flex;justify-content:center;align-items:center;gap:8px}
+.mr-checkout{background:var(--gold);color:#0b2342;box-shadow:0 4px 0 #c5962f}
+.mr-checkout:disabled{opacity:.45;cursor:not-allowed;box-shadow:none}
+.mr-clear-cart{margin-top:9px;background:transparent;border:1px solid #ffffff3d;color:#fff}
+.mr-shop-footnote{font-size:10px;line-height:1.6;color:#6b7890;margin:20px 0 0}
+.mr-shop-footnote strong{color:var(--ink)}
+.mr-shop-toast{position:fixed;right:18px;bottom:18px;z-index:600;background:#0b2342;color:#fff;padding:12px 17px;border-radius:999px;box-shadow:0 12px 35px #0b234240;font-size:12px;font-weight:900;opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .2s,transform .2s}
+.mr-shop-toast.show{opacity:1;transform:translateY(0)}
+@media(max-width:1100px){.mr-shop-layout{grid-template-columns:minmax(0,1fr) 280px}.mr-shop-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mr-product-art{height:185px}.mr-shop-head{grid-template-columns:minmax(0,1fr) minmax(220px,.65fr)}}
+@media(max-width:980px){#mr-cart-jump{display:grid!important}.mr-shop-layout{grid-template-columns:1fr}.mr-shop-cart{position:relative;top:auto;max-width:none}.mr-shop-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mr-shop-head{grid-template-columns:1fr;gap:14px}.mr-shop-intro{max-width:680px}.mr-shop:after{font-size:220px}}
+@media(max-width:520px){.mr-shop{padding:60px 0}.mr-shop-grid{gap:10px}.mr-product{border-radius:18px}.mr-product-art{height:145px}.mr-product-info{padding:12px 10px}.mr-product-name{font-size:15px}.mr-product-desc{font-size:10px;min-height:46px}.mr-price{font-size:16px}.mr-add{padding:9px 10px;font-size:9px}.mr-brand-label span{font-size:7px}.mr-product-bottom{align-items:flex-start;flex-direction:column;gap:10px}.mr-add{width:100%}.mr-cart-title{font-size:23px}.mr-shop-notice{align-items:flex-start}.mr-pouch{transform:scale(.88)}.mr-tumbler{transform:scale(.88)}.mr-cap{transform:scale(.85) rotate(-7deg)}.mr-tote{transform:scale(.88)}.mr-stickers{transform:scale(.85)}}
+
+</style>
+<style>
+
+/* === MITTAL RESERVE JOYFUL HERO + FRONT-OF-PAGE PRODUCT PARADE (additive only) === */
+#top .hero{box-shadow:0 22px 0 rgba(0,72,192,.12),0 30px 68px rgba(0,72,192,.10)}
+#top .hero-paper{background-color:var(--cream);background-image:radial-gradient(circle at 13% 88%,rgba(248,203,97,.20) 0 3px,transparent 4px),radial-gradient(circle at 20% 91%,rgba(255,107,115,.18) 0 4px,transparent 5px),radial-gradient(circle at 10% 95%,rgba(9,105,232,.14) 0 3px,transparent 4px)}
+#top .pill-star{animation:mr-pill-pop 2.8s ease-in-out infinite}
+#top .hero-stamp{background:rgba(255,253,246,.82);box-shadow:0 8px 0 rgba(9,105,232,.06);animation:mr-stamp-wiggle 7s ease-in-out infinite}
+#top .hero-doodle{filter:drop-shadow(0 3px 0 rgba(255,255,255,.72))}
+#top .doodle-heart{animation:mr-heart-bounce 3.2s ease-in-out infinite}
+#top .doodle-star{animation:mr-star-wiggle 4.2s ease-in-out infinite}
+@keyframes mr-pill-pop{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(1.08) rotate(-7deg)}}
+@keyframes mr-stamp-wiggle{0%,100%{transform:rotate(10deg)}50%{transform:rotate(4deg) translateY(-4px)}}
+@keyframes mr-heart-bounce{0%,100%{transform:translateY(0) rotate(15deg)}50%{transform:translateY(-9px) rotate(22deg)}}
+@keyframes mr-star-wiggle{0%,100%{transform:rotate(10deg) scale(1)}50%{transform:rotate(28deg) scale(1.14)}}
+.mr-front-shelf{position:relative;isolation:isolate;overflow:hidden;padding:clamp(32px,5vw,66px) 0 clamp(26px,4vw,48px);background:linear-gradient(180deg,#fff9ec 0%,#fff6e4 100%)}
+.mr-front-shelf:before{content:"✦";position:absolute;z-index:-1;left:-24px;top:20px;font-size:150px;line-height:1;color:#ff6b7310;transform:rotate(-14deg);pointer-events:none}
+.mr-front-shelf:after{content:"✧";position:absolute;z-index:-1;right:-5px;bottom:-70px;font-size:220px;line-height:1;color:#0969e80c;transform:rotate(14deg);pointer-events:none}
+.mr-front-shelf-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:21px}
+.mr-front-kicker{display:flex;align-items:center;gap:8px;margin-bottom:10px;color:var(--blue);font-size:10px;letter-spacing:.17em;font-weight:1000;text-transform:uppercase}
+.mr-front-kicker:before{content:"";width:22px;height:3px;border-radius:99px;background:var(--coral)}
+.mr-front-shelf-head h2{margin:0;color:var(--navy);font-size:clamp(32px,4vw,52px);line-height:.96;letter-spacing:-.065em;font-weight:1000}
+.mr-front-shelf-head h2 em{font-family:Georgia,serif;color:var(--coral);font-weight:500}
+.mr-front-subcopy{max-width:310px;margin:0;color:#657389;font-size:12px;line-height:1.65}
+.mr-front-shop-link{display:inline-flex;align-items:center;justify-content:center;gap:10px;margin-top:12px;background:var(--blue);color:white;border-radius:999px;padding:13px 17px;font-size:11px;font-weight:1000;box-shadow:0 4px 0 var(--blue2);transition:transform .18s,background .18s;white-space:nowrap}
+.mr-front-shop-link:hover{background:var(--coral);transform:translateY(-2px);box-shadow:0 4px 0 #df515d}
+.mr-front-product-rail{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.mr-front-product{position:relative;display:grid;grid-template-columns:112px minmax(0,1fr);align-items:center;gap:14px;min-width:0;min-height:164px;overflow:hidden;padding:13px;border:1px solid rgba(11,35,66,.09);border-radius:24px;background:rgba(255,253,246,.88);box-shadow:0 12px 30px rgba(11,35,66,.055);transition:transform .24s,box-shadow .24s,border-color .24s}
+.mr-front-product:hover{transform:translateY(-5px) rotate(-.35deg);box-shadow:0 22px 42px rgba(11,35,66,.11);border-color:#0969e84a}
+.mr-front-scene{position:relative;display:grid;place-items:center;align-self:stretch;min-height:136px;overflow:hidden;border-radius:17px;background:var(--scene,#dcecff);isolation:isolate}
+.mr-front-scene:before{content:"";position:absolute;z-index:-1;width:124px;height:124px;border-radius:50%;right:-44px;bottom:-55px;background:rgba(255,255,255,.52)}
+.mr-front-scene:after{content:"✦";position:absolute;z-index:2;left:10px;top:8px;color:#fff;font-size:17px;text-shadow:0 2px 4px #0b234222}
+.mr-front-object{position:relative;filter:drop-shadow(0 9px 7px rgba(7,26,49,.18));transition:transform .25s}
+.mr-front-product:hover .mr-front-object{transform:translateY(-4px) rotate(-2deg)}
+.mr-front-pouch{width:76px;height:103px;border-radius:8px 8px 13px 13px;background:linear-gradient(105deg,#123b7a 0%,#0969e8 34%,#0b5bd0 68%,#0047b5 100%);clip-path:polygon(5% 0,95% 0,100% 94%,90% 100%,10% 100%,0 94%);padding-top:12px;box-shadow:inset 7px 0 10px #ffffff17,inset -5px 0 9px #001d582c}
+.mr-front-pouch:before{content:"";position:absolute;top:7px;left:0;right:0;height:4px;background:linear-gradient(90deg,#e2b953,#ffe49a,#d4a742)}
+.mr-front-pouch:after{content:"";position:absolute;left:4px;right:4px;bottom:5px;height:5px;border-radius:50%;background:#032e7b38}
+.mr-front-cup{width:68px;height:82px;margin-top:11px;border-radius:6px 6px 15px 15px;background:linear-gradient(90deg,#d2e2f5,#fffdf6 29%,#fff 52%,#dce8f5 100%);clip-path:polygon(3% 0,97% 0,86% 100%,14% 100%);padding-top:25px;filter:drop-shadow(0 9px 5px #0b23421f)}
+.mr-front-cup:before{content:"";position:absolute;top:-2px;left:-2px;right:-2px;height:12px;border-radius:5px;background:linear-gradient(90deg,#071a31,#24466f,#071a31)}
+.mr-front-cup:after{content:"";position:absolute;left:13px;right:13px;bottom:8px;height:1px;background:#0969e85e}
+.mr-front-gift{width:84px;height:72px;margin-top:13px;border:5px solid #004fc8;border-radius:5px;background:linear-gradient(115deg,#0969e8,#0b58c1);padding-top:15px;box-shadow:inset 0 0 0 1px #ffffff38}
+.mr-front-gift:before{content:"";position:absolute;left:50%;top:-5px;bottom:-5px;width:10px;transform:translateX(-50%);background:linear-gradient(90deg,#f35b68,#ff99a0,#e74a5c)}
+.mr-front-gift:after{content:"";position:absolute;top:-16px;left:26px;width:25px;height:19px;border:5px solid #ff6b73;border-radius:80% 80% 30% 80%;transform:rotate(20deg);background:transparent}
+.mr-front-label{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:4px;width:100%;min-height:35px;padding:4px 3px;background:linear-gradient(110deg,#fff9ec,#fffefb 50%,#e8eff8);border-top:1px solid #0b23421a;border-bottom:1px solid #0b23421a;box-shadow:0 2px 6px #071a311c;color:var(--navy)}
+.mr-front-label b{display:grid;place-items:center;flex:none;width:21px;height:21px;border-radius:6px;background:var(--blue);color:#fff;font-size:8px;letter-spacing:-.07em}
+.mr-front-label span{display:block;font-size:7px;line-height:1.04;letter-spacing:.04em;font-weight:1000}
+.mr-front-label small{display:block;margin-top:3px;color:var(--blue);font-size:4.5px;line-height:1.1;letter-spacing:.09em;font-weight:1000}
+.mr-front-product-copy{min-width:0;align-self:center}
+.mr-front-tag{display:inline-flex;align-items:center;gap:5px;color:var(--blue);font-size:7px;font-weight:1000;letter-spacing:.13em;text-transform:uppercase}
+.mr-front-tag:before{content:"";width:5px;height:5px;border-radius:50%;background:var(--coral);box-shadow:0 0 0 3px #ff6b7318}
+.mr-front-product h3{margin:8px 0 5px;color:var(--navy);font-size:17px;line-height:1.02;letter-spacing:-.05em;font-weight:1000}
+.mr-front-product p{margin:0;color:#657389;font-size:10px;line-height:1.5}
+.mr-front-view{display:inline-flex;align-items:center;gap:6px;margin-top:11px;color:var(--blue);font-size:9px;font-weight:1000}
+.mr-front-view span{transition:transform .2s}
+.mr-front-product:hover .mr-front-view span{transform:translate(3px,-2px)}
+.mr-front-disclaimer{margin:13px 0 0;color:#778397;font-size:9px;line-height:1.5}
+@media(max-width:1050px){.mr-front-product-rail{grid-template-columns:repeat(3,minmax(0,1fr))}.mr-front-product{grid-template-columns:90px minmax(0,1fr);gap:10px;padding:10px}.mr-front-scene{min-height:132px}.mr-front-shelf-head{align-items:flex-start}}
+@media(max-width:760px){.mr-front-shelf{padding:31px 0 27px}.mr-front-shelf-head{display:block;margin-bottom:17px}.mr-front-shelf-head h2{font-size:38px}.mr-front-subcopy{max-width:390px;margin-top:11px;font-size:11px}.mr-front-shop-link{margin-top:12px;padding:12px 15px}.mr-front-product-rail{display:flex;overflow-x:auto;gap:11px;padding:2px 2px 13px;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#0969e8 #dcecff}.mr-front-product{flex:0 0 min(84vw,340px);grid-template-columns:112px minmax(0,1fr);min-height:154px;scroll-snap-align:start}.mr-front-scene{min-height:132px}.mr-front-product h3{font-size:18px}.mr-front-product p{font-size:10px}}
+@media(max-width:390px){.mr-front-product{flex-basis:86vw;grid-template-columns:101px minmax(0,1fr)}.mr-front-shelf-head h2{font-size:34px}.mr-front-product h3{font-size:16px}.mr-front-view{font-size:8px}}
+@media(prefers-reduced-motion:reduce){#top .pill-star,#top .hero-stamp,#top .doodle-heart,#top .doodle-star{animation:none!important}.mr-front-product,.mr-front-object,.mr-front-view span{transition:none!important}}
+/* === End additive MITTAL RESERVE home enhancement === */
+
 </style>
 </head>
 <body>
@@ -179,9 +344,9 @@
 <div class="announcement"><span class="spark">✦</span> THE LITTLE THINGS ARE THE BIG THINGS <span class="spark">✦</span> A FESTIVE MITTAL RESERVE MOMENT <span class="spark">✦</span></div>
 <header class="header">
  <a class="brand" href="#top" aria-label="MITTAL RESERVE home"><span class="brand-seal" aria-hidden="true">MR</span><span class="brand-name">MITTAL RESERVE<small>THE JOYFUL WINTER EDITION</small></span></a>
- <nav class="nav-links" aria-label="Main navigation"><a href="#feeling">The feeling</a><a href="#signatures">The signatures</a><a href="#story">Our story</a><a href="#joy-edit">The joy edit</a><a href="#gallery">Gallery</a><a href="#contact">Say hello</a></nav>
- <div class="header-right"><button class="round-btn" id="snowToggle" type="button" aria-label="Pause snowfall" title="Toggle snowfall"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 2v20M4.5 6.5l15 11M19.5 6.5l-15 11M7 2l5 4 5-4M7 22l5-4 5 4"/></svg></button><a class="round-btn" href="#contact" aria-label="Email MITTAL RESERVE"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></a><button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button></div>
- <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation"><a href="#feeling">The feeling ↗</a><a href="#signatures">Signatures ↗</a><a href="#story">Our story ↗</a><a href="#joy-edit">The joy edit ↗</a><a href="#mood-finder">Mood finder ↗</a><a href="#detail-notes">The details ↗</a><a href="#gallery">Gallery ↗</a><a href="#contact">Say hello ↗</a><a href="#top" id="mobileSnow">Snowfall: on ❄</a></nav>
+ <nav class="nav-links" aria-label="Main navigation"><a href="#feeling">The feeling</a><a href="#signatures">The signatures</a><a href="#story">Our story</a><a href="#joy-edit">The joy edit</a><a href="#mr-shop">Shop</a><a href="#gallery">Gallery</a><a href="#contact">Say hello</a></nav>
+ <div class="header-right"><a class="round-btn" id="mr-cart-jump" href="#mr-shop-cart" aria-label="Open MITTAL RESERVE shopping bag" title="Shopping bag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l1 13H4L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span id="mr-cart-count" class="mr-cart-count" aria-live="polite">0</span></a><button class="round-btn" id="snowToggle" type="button" aria-label="Pause snowfall" title="Toggle snowfall"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 2v20M4.5 6.5l15 11M19.5 6.5l-15 11M7 2l5 4 5-4M7 22l5-4 5 4"/></svg></button><a class="round-btn" href="#contact" aria-label="Email MITTAL RESERVE"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></a><button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button></div>
+ <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation"><a href="#feeling">The feeling ↗</a><a href="#signatures">Signatures ↗</a><a href="#story">Our story ↗</a><a href="#joy-edit">The joy edit ↗</a><a href="#mr-shop">Shop the label ↗</a><a href="#mr-shop-cart">Your shopping bag ↗</a><a href="#mood-finder">Mood finder ↗</a><a href="#detail-notes">The details ↗</a><a href="#gallery">Gallery ↗</a><a href="#contact">Say hello ↗</a><a href="#top" id="mobileSnow">Snowfall: on ❄</a></nav>
 </header>
 <main id="main">
 <section class="hero-wrap" id="top" aria-labelledby="heroTitle"><div class="hero">
@@ -200,6 +365,64 @@
   <div class="hero-bottom-mark">SIP · SMILE · REPEAT</div>
  </div>
 </div></section>
+
+<section class="mr-front-shelf" id="mr-front-shelf" aria-labelledby="mr-front-shelf-title">
+  <div class="shell">
+    <div class="mr-front-shelf-head">
+      <div>
+        <div class="mr-front-kicker">A LITTLE LOOK AT OUR LABEL</div>
+        <h2 id="mr-front-shelf-title">Tiny things.<br><em>Major joy.</em></h2>
+      </div>
+      <div>
+        <p class="mr-front-subcopy">Meet the signature MITTAL RESERVE look: joyful colour, a recognisable MR seal, and thoughtful wraps, labels and prints made to feel like one happy little world.</p>
+        <a class="mr-front-shop-link" href="#mr-shop">Explore the collection <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    <div class="mr-front-product-rail" aria-label="Featured MITTAL RESERVE product and packaging concepts">
+      <a class="mr-front-product" href="#mr-shop" aria-label="Explore the Signature Roast Pouch packaging concept">
+        <div class="mr-front-scene" style="--scene:#dcecff" aria-hidden="true">
+          <div class="mr-front-object mr-front-pouch">
+            <div class="mr-front-label"><b>MR</b><span>MITTAL<br>RESERVE<small>SIGNATURE ROAST</small></span></div>
+          </div>
+        </div>
+        <div class="mr-front-product-copy">
+          <span class="mr-front-tag">The signature wrap</span>
+          <h3>Signature Roast Pouch</h3>
+          <p>Stand-up pouch styling with a clear front label and gold seal detail.</p>
+          <span class="mr-front-view">See product details <span aria-hidden="true">↗</span></span>
+        </div>
+      </a>
+      <a class="mr-front-product" href="#mr-shop" aria-label="Explore the Cup of Joy packaging concept">
+        <div class="mr-front-scene" style="--scene:#ffe1df" aria-hidden="true">
+          <div class="mr-front-object mr-front-cup">
+            <div class="mr-front-label"><b>MR</b><span>MITTAL<br>RESERVE<small>SIP · SMILE · REPEAT</small></span></div>
+          </div>
+        </div>
+        <div class="mr-front-product-copy">
+          <span class="mr-front-tag">The cup label</span>
+          <h3>Cup of Joy</h3>
+          <p>A branded takeaway-cup sleeve direction in cobalt, cream and coral.</p>
+          <span class="mr-front-view">See product details <span aria-hidden="true">↗</span></span>
+        </div>
+      </a>
+      <a class="mr-front-product" href="#mr-shop" aria-label="Explore the Little Joy Gift Set packaging concept">
+        <div class="mr-front-scene" style="--scene:#e1efd9" aria-hidden="true">
+          <div class="mr-front-object mr-front-gift">
+            <div class="mr-front-label"><b>MR</b><span>MITTAL<br>RESERVE<small>GIFT A GOOD FEELING</small></span></div>
+          </div>
+        </div>
+        <div class="mr-front-product-copy">
+          <span class="mr-front-tag">The gift wrap</span>
+          <h3>Little Joy Gift Set</h3>
+          <p>A bold gift-box band with the same MR seal and signature label system.</p>
+          <span class="mr-front-view">See product details <span aria-hidden="true">↗</span></span>
+        </div>
+      </a>
+    </div>
+    <p class="mr-front-disclaimer">Packaging shown as original MITTAL RESERVE design concepts; final materials, product contents, manufacturing and availability are to be confirmed before sale.</p>
+  </div>
+</section>
+
 <div class="ticker" aria-label="Sip, smile, repeat, share the joy"><div class="ticker-track" aria-hidden="true"><span>SIP</span><span>✦</span><span>SMILE</span><span>✦</span><span>REPEAT</span><span>✦</span><span>SHARE THE JOY</span><span>✦</span><span>SIP</span><span>✦</span><span>SMILE</span><span>✦</span><span>REPEAT</span><span>✦</span><span>SHARE THE JOY</span><span>✦</span></div></div>
 <section class="section" id="feeling"><div class="shell"><div class="section-head reveal"><div><div class="section-index">01 / The happy philosophy</div><h2>Good mood.<br><em>Great little rituals.</em></h2></div><p class="section-intro">The best moments rarely need a big plan. Just a warm pause, good company, and a reason to smile.</p></div>
  <div class="joy-grid">
@@ -274,6 +497,65 @@
   <button class="gallery-card reveal" type="button" data-full="./4.jpg" data-caption="Frame 04 · The happy photo diary" aria-label="Open gallery photo 4"><span class="gallery-number">FRAME 04</span><img src="./4.jpg" alt="MITTAL RESERVE gallery photograph 4" loading="lazy"><span class="gallery-placeholder"><span class="placeholder-icon">❋</span><strong>Fireside dreams</strong><small>Add your photo · 4.jpg</small></span><span class="gallery-caption">Fireside dreams</span><span class="gallery-open" aria-hidden="true">↗</span></button>
   <button class="gallery-card reveal" type="button" data-full="./5.jpg" data-caption="Frame 05 · The happy photo diary" aria-label="Open gallery photo 5"><span class="gallery-number">FRAME 05</span><img src="./5.jpg" alt="MITTAL RESERVE gallery photograph 5" loading="lazy"><span class="gallery-placeholder"><span class="placeholder-icon">♡</span><strong>Small joys</strong><small>Add your photo · 5.jpg</small></span><span class="gallery-caption">Small joys, kept close</span><span class="gallery-open" aria-hidden="true">↗</span></button>
  </div><p class="gallery-help reveal">Use your own files named <b>1.jpg</b>, <b>2.jpg</b>, <b>3.jpg</b>, <b>4.jpg</b>, and <b>5.jpg</b> in the same folder as this HTML. Until then, each frame displays a designed placeholder.</p></div></section>
+<section class="mr-shop" id="mr-shop" aria-labelledby="mr-shop-title">
+ <div class="shell">
+  <div class="mr-shop-head reveal">
+   <div><div class="mr-shop-kicker">THE MITTAL RESERVE LABEL · SHOP THE JOY</div><h2 id="mr-shop-title">Little goods.<br><em>Big happy.</em></h2></div>
+   <p class="mr-shop-intro">Meet the MITTAL RESERVE collection: cosy café favourites, everyday carry goods and small gifts, all dressed in our signature blue, coral and gold label.</p>
+  </div>
+  <div class="mr-shop-notice"><span aria-hidden="true">✦</span><span><strong>Made for the concept store.</strong> These product designs and prices are illustrative previews. This single-file site does not collect payments or confirm stock.</span></div>
+  <div class="mr-shop-layout">
+   <div class="mr-shop-grid" id="mr-products" aria-label="MITTAL RESERVE products">
+    <article class="mr-product" data-product-id="signature-pouch" data-name="Signature Roast Pouch" data-price="399" data-category="Café favourites">
+     <div class="mr-product-art" style="--art-bg:#dcecff"><span class="mr-art-spark">✦</span><div class="mr-pack mr-pouch"><p class="mr-flavour">SIGNATURE ROAST</p><p class="mr-tinyline">A LITTLE CUP OF WONDER</p><div class="mr-brand-label"><b>MR</b><span>MITTAL<br>RESERVE<small>THE JOYFUL EDITION</small></span></div></div></div>
+     <div class="mr-product-info"><span class="mr-product-category">CAFÉ FAVOURITES</span><h3 class="mr-product-name">Signature Roast Pouch</h3><p class="mr-product-desc">A café-style pack concept with the MITTAL RESERVE wrap and seal.</p><div class="mr-product-bottom"><span class="mr-price">₹399</span><button class="mr-add" type="button" data-add-product="signature-pouch">Add to bag +</button></div></div>
+    </article>
+    <article class="mr-product" data-product-id="velvet-cocoa" data-name="Velvet Cocoa Pack" data-price="249" data-category="Café favourites">
+     <div class="mr-product-art" style="--art-bg:#ffe5de"><span class="mr-art-spark">♡</span><div class="mr-pack mr-pouch mr-cocoa"><p class="mr-flavour">VELVET COCOA</p><p class="mr-tinyline">SIP SOMETHING COSY</p><div class="mr-brand-label"><b>MR</b><span>MITTAL<br>RESERVE<small>WARM MOMENTS</small></span></div></div></div>
+     <div class="mr-product-info"><span class="mr-product-category">CAFÉ FAVOURITES</span><h3 class="mr-product-name">Velvet Cocoa Pack</h3><p class="mr-product-desc">A warm-toned wrapper concept, finished with our house label.</p><div class="mr-product-bottom"><span class="mr-price">₹249</span><button class="mr-add" type="button" data-add-product="velvet-cocoa">Add to bag +</button></div></div>
+    </article>
+    <article class="mr-product" data-product-id="joy-cup" data-name="Cup of Joy" data-price="149" data-category="Drinkware">
+     <div class="mr-product-art" style="--art-bg:#e1efd9"><span class="mr-art-spark">✧</span><div class="mr-pack mr-cup"><div class="mr-brand-label"><b>MR</b><span>MITTAL<br>RESERVE<small>TAKE JOY ALONG</small></span></div></div></div>
+     <div class="mr-product-info"><span class="mr-product-category">DRINKWARE</span><h3 class="mr-product-name">Cup of Joy</h3><p class="mr-product-desc">A bright takeaway cup concept with an all-around branded sleeve.</p><div class="mr-product-bottom"><span class="mr-price">₹149</span><button class="mr-add" type="button" data-add-product="joy-cup">Add to bag +</button></div></div>
+    </article>
+    <article class="mr-product" data-product-id="everyday-mug" data-name="Everyday Happy Mug" data-price="349" data-category="Drinkware">
+     <div class="mr-product-art" style="--art-bg:#fff0cf"><span class="mr-art-spark">✦</span><div class="mr-pack mr-mug"><div class="mr-brand-label"><b>MR</b><span>MITTAL<br>RESERVE<small>YOUR LITTLE RITUAL</small></span></div></div></div>
+     <div class="mr-product-info"><span class="mr-product-category">DRINKWARE</span><h3 class="mr-product-name">Everyday Happy Mug</h3><p class="mr-product-desc">A cream-and-blue mug mock-up with the label printed on its front.</p><div class="mr-product-bottom"><span class="mr-price">₹349</span><button class="mr-add" type="button" data-add-product="everyday-mug">Add to bag +</button></div></div>
+    </article>
+    <article class="mr-product" data-product-id="reserve-tumbler" data-name="Reserve Tumbler" data-price="499" data-category="Drinkware">
+     <div class="mr-product-art" style="--art-bg:#ffd5d8"><span class="mr-art-spark">♡</span><div class="mr-pack mr-tumbler"><div class="mr-brand-label"><b>MR</b><span>MITTAL<br>RESERVE<small>ON THE GO</small></span></div></div></div>
+     <div class="mr-product-info"><span class="mr-product-category">DRINKWARE</span><h3 class="mr-product-name">Reserve Tumbler</h3><p class="mr-product-desc">A coral travel cup concept with a full-width MITTAL RESERVE label.</p><div class="mr-product-bottom"><span class="mr-price">₹499</span><button class="mr-add" type="button" data-add-product="reserve-tumbler">Add to bag +</button></div></div>
+    </article>
+    <article class="mr-product" data-product-id="blue-cap" data-name="The Reserve Cap" data-price="449" data-category="Wear the label">
+     <div class="mr-product-art" style="--art-bg:#e2edff"><span class="mr-art-spark">✧</span><div class="mr-pack mr-cap"><div class="mr-brand-label"><b>MR</b><span>MITTAL<br>RESERVE</span></div></div></div>
+     <div class="mr-product-info"><span class="mr-product-category">WEAR THE LABEL</span><h3 class="mr-product-name">The Reserve Cap</h3><p class="mr-product-desc">A cobalt cap mock-up with the MITTAL RESERVE badge on the front.</p><div class="mr-product-bottom"><span class="mr-price">₹449</span><button class="mr-add" type="button" data-add-product="blue-cap">Add to bag +</button></div></div>
+    </article>
+    <article class="mr-product" data-product-id="joy-tote" data-name="Little Joy Tote" data-price="299" data-category="Everyday goods">
+     <div class="mr-product-art" style="--art-bg:#f5e9d5"><span class="mr-art-spark">✦</span><div class="mr-pack mr-tote"><div class="mr-brand-label"><b>MR</b><span>MITTAL<br>RESERVE<small>CARRY A LITTLE JOY</small></span></div></div></div>
+     <div class="mr-product-info"><span class="mr-product-category">EVERYDAY GOODS</span><h3 class="mr-product-name">Little Joy Tote</h3><p class="mr-product-desc">A canvas bag concept with our own label shown as a front print.</p><div class="mr-product-bottom"><span class="mr-price">₹299</span><button class="mr-add" type="button" data-add-product="joy-tote">Add to bag +</button></div></div>
+    </article>
+    <article class="mr-product" data-product-id="mascot-stickers" data-name="Mascot Sticker Set" data-price="129" data-category="Little extras">
+     <div class="mr-product-art" style="--art-bg:#ffe3e3"><div class="mr-pack mr-stickers"><span class="mr-sticker">MR</span><span class="mr-sticker">♡</span><span class="mr-sticker">✦</span><small>MITTAL RESERVE</small></div></div>
+     <div class="mr-product-info"><span class="mr-product-category">LITTLE EXTRAS</span><h3 class="mr-product-name">Mascot Sticker Set</h3><p class="mr-product-desc">Three playful brand stickers for bottles, notebooks and gift wrap.</p><div class="mr-product-bottom"><span class="mr-price">₹129</span><button class="mr-add" type="button" data-add-product="mascot-stickers">Add to bag +</button></div></div>
+    </article>
+    <article class="mr-product" data-product-id="little-gift-set" data-name="Little Joy Gift Set" data-price="899" data-category="Gifting">
+     <div class="mr-product-art" style="--art-bg:#dcecff"><span class="mr-art-spark">✧</span><div class="mr-pack mr-gift"><div class="mr-brand-label"><b>MR</b><span>MITTAL<br>RESERVE<small>GIFT A GOOD FEELING</small></span></div></div></div>
+     <div class="mr-product-info"><span class="mr-product-category">GIFTING</span><h3 class="mr-product-name">Little Joy Gift Set</h3><p class="mr-product-desc">A gift-box packaging concept wrapped with our signature brand band.</p><div class="mr-product-bottom"><span class="mr-price">₹899</span><button class="mr-add" type="button" data-add-product="little-gift-set">Add to bag +</button></div></div>
+    </article>
+   </div>
+   <aside class="mr-shop-cart" id="mr-shop-cart" aria-labelledby="mr-cart-title">
+    <div class="mr-cart-head"><div><span class="mr-cart-count-label">YOUR LITTLE HAUL</span><h3 class="mr-cart-title" id="mr-cart-title">Shopping bag</h3></div><span aria-hidden="true" style="font-size:26px;color:#f8cb61">✦</span></div>
+    <div class="mr-cart-lines" id="mr-cart-lines" aria-live="polite"><div class="mr-cart-empty">Your bag is waiting for a little joy. Add a product to see it here.</div></div>
+    <div class="mr-cart-total"><span>Estimated subtotal</span><strong id="mr-cart-subtotal">₹0</strong></div>
+    <p class="mr-cart-fineprint">Concept prices only. Shipping, taxes, availability and payment are not calculated or collected here.</p>
+    <button type="button" class="mr-checkout" id="mr-checkout" disabled>Request this basket by email ↗</button>
+    <button type="button" class="mr-clear-cart" id="mr-clear-cart">Clear bag</button>
+   </aside>
+  </div>
+  <p class="mr-shop-footnote"><strong>The MITTAL RESERVE label:</strong> each product mock-up displays our brand name, MR seal and a matching wrap, print or badge. Before selling real goods, confirm final product specifications, prices, stock and packaging artwork.</p>
+ </div>
+ <div class="mr-shop-toast" id="mr-shop-toast" role="status" aria-live="polite"></div>
+</section>
 <section class="contact" id="contact"><div class="shell contact-grid"><div class="reveal"><div class="section-index">10 / Leave a little note</div><h2>Let's make<br><em>something lovely.</em></h2><p class="contact-copy">Have a creative idea, a collaboration in mind, or a kind word to share? Send a note. Every lovely story begins with a hello.</p></div><div class="contact-card reveal"><span class="contact-label">A direct line to MITTAL RESERVE</span><a class="email-link" href="mailto:mittalshaurya66@gmail.com?subject=Hello%20MITTAL%20RESERVE">mittalshaurya66@gmail.com <span aria-hidden="true">↗</span></a><p>For brand conversations, creative ideas, and all the little things in between.</p><a class="contact-cta" href="mailto:mittalshaurya66@gmail.com?subject=Hello%20MITTAL%20RESERVE">Send a little hello <span>↗</span></a></div></div></section>
 </main>
 <footer class="footer"><div class="shell"><div class="footer-top"><a class="brand" href="#top" aria-label="MITTAL RESERVE home"><span class="brand-seal" aria-hidden="true">MR</span><span class="brand-name">MITTAL RESERVE<small>THE JOYFUL WINTER EDITION</small></span></a><span class="footer-motto">“Good things feel even better shared.”</span></div><div class="footer-bottom"><span>© <span id="year">2026</span> MITTAL RESERVE</span><span>Winter, served with wonder. Made with care.</span><a href="#top">Back to the joy ↑</a></div></div></footer>
@@ -317,5 +599,40 @@
  const founderPhoto=$('.founder-photo');function showFounderPhoto(){$('#founderCard').classList.remove('photo-missing')}function showFounderFallback(){if(!founderPhoto.naturalWidth)$('#founderCard').classList.add('photo-missing')}founderPhoto.addEventListener('load',showFounderPhoto);founderPhoto.addEventListener('error',showFounderFallback);if(founderPhoto.complete){if(founderPhoto.naturalWidth)showFounderPhoto();else showFounderFallback()}
 })();
 </script>
+
+<script>
+/* MITTAL RESERVE local shopping bag. Cart state stays in this browser; checkout opens an email draft only. */
+(()=>{
+ const mrProducts=Array.from(document.querySelectorAll('#mr-products .mr-product')).map(card=>({id:card.dataset.productId,name:card.dataset.name,price:Number(card.dataset.price)||0}));
+ const mrById=Object.fromEntries(mrProducts.map(p=>[p.id,p]));
+ const mrLines=document.getElementById('mr-cart-lines');
+ const mrSubtotal=document.getElementById('mr-cart-subtotal');
+ const mrCount=document.getElementById('mr-cart-count');
+ const mrCheckout=document.getElementById('mr-checkout');
+ const mrToast=document.getElementById('mr-shop-toast');
+ const mrStoreKey='mittal-reserve-cart-v1';
+ let mrCart={};
+ try{const stored=JSON.parse(localStorage.getItem(mrStoreKey)||'{}');if(stored&&typeof stored==='object'&&!Array.isArray(stored)){for(const [id,qty] of Object.entries(stored)){if(mrById[id]&&Number.isFinite(Number(qty))&&Number(qty)>0)mrCart[id]=Math.min(99,Math.floor(Number(qty)))}}}catch(_e){mrCart={}}
+ let mrToastTimer;
+ const mrMoney=value=>'₹'+Number(value||0).toLocaleString('en-IN',{maximumFractionDigits:0});
+ function mrSave(){try{localStorage.setItem(mrStoreKey,JSON.stringify(mrCart))}catch(_e){}}
+ function mrNotice(message){if(!mrToast)return;mrToast.textContent=message;mrToast.classList.add('show');clearTimeout(mrToastTimer);mrToastTimer=setTimeout(()=>mrToast.classList.remove('show'),2300)}
+ function mrRender(){
+  const ids=Object.keys(mrCart).filter(id=>mrById[id]&&mrCart[id]>0);
+  const count=ids.reduce((sum,id)=>sum+mrCart[id],0);
+  const total=ids.reduce((sum,id)=>sum+mrById[id].price*mrCart[id],0);
+  mrCount.textContent=count>99?'99+':String(count);mrCount.setAttribute('aria-label',count+' items in bag');
+  if(!ids.length){mrLines.innerHTML='<div class="mr-cart-empty">Your bag is waiting for a little joy. Add a product to see it here.</div>'}
+  else{mrLines.innerHTML=ids.map(id=>{const p=mrById[id],qty=mrCart[id];return '<div class="mr-cart-line" data-cart-line="'+id+'"><div><div class="mr-cart-line-name">'+p.name+'</div><div class="mr-cart-line-price">'+mrMoney(p.price)+' each · '+mrMoney(p.price*qty)+'</div></div><div class="mr-cart-controls"><button type="button" class="mr-qty-btn" data-cart-action="minus" data-id="'+id+'" aria-label="Reduce '+p.name+' quantity">−</button><span class="mr-qty" aria-label="Quantity">'+qty+'</span><button type="button" class="mr-qty-btn" data-cart-action="plus" data-id="'+id+'" aria-label="Increase '+p.name+' quantity">+</button><button type="button" class="mr-remove-btn" data-cart-action="remove" data-id="'+id+'" aria-label="Remove '+p.name+'">×</button></div></div>'}).join('')}
+  mrSubtotal.textContent=mrMoney(total);mrCheckout.disabled=count===0;mrCheckout.setAttribute('aria-disabled',String(count===0));
+ }
+ document.querySelectorAll('[data-add-product]').forEach(btn=>btn.addEventListener('click',()=>{const id=btn.dataset.addProduct;if(!mrById[id])return;mrCart[id]=Math.min(99,(mrCart[id]||0)+1);mrSave();mrRender();mrNotice(mrById[id].name+' added to your bag ✦')}));
+ mrLines.addEventListener('click',event=>{const btn=event.target.closest('[data-cart-action]');if(!btn)return;const id=btn.dataset.id;if(!mrById[id])return;const action=btn.dataset.cartAction;if(action==='plus')mrCart[id]=Math.min(99,(mrCart[id]||0)+1);else if(action==='minus'){mrCart[id]=(mrCart[id]||0)-1;if(mrCart[id]<=0)delete mrCart[id]}else if(action==='remove')delete mrCart[id];mrSave();mrRender()});
+ document.getElementById('mr-clear-cart').addEventListener('click',()=>{mrCart={};mrSave();mrRender();mrNotice('Your bag is clear.')});
+ mrCheckout.addEventListener('click',()=>{const ids=Object.keys(mrCart).filter(id=>mrById[id]&&mrCart[id]>0);if(!ids.length)return;const total=ids.reduce((sum,id)=>sum+mrById[id].price*mrCart[id],0);const lines=ids.map(id=>mrById[id].name+' × '+mrCart[id]+' — '+mrMoney(mrById[id].price*mrCart[id]));const body=['Hello MITTAL RESERVE,','', 'I would like to enquire about this concept basket:',...lines,'','Illustrative subtotal (not a confirmed quote): '+mrMoney(total),'','Please confirm product details, availability, final prices and delivery before an order is accepted.'].join('\n');const subject='MITTAL RESERVE basket enquiry';window.location.href='mailto:mittalshaurya66@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body)});
+ mrRender();
+})();
+</script>
+
 </body>
 </html>
